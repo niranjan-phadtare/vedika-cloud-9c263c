@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#173f35">
+  <meta name="description" content="Vedika: five private Vedic reports in English, Hindi and Marathi. Session-only birth details, downloadable PDF reports and transparent traditional rules.">
+  <title>Vedika · Personal Vedic Reports</title>
+  <link rel="manifest" href="/static/manifest.webmanifest">
+  <link rel="icon" type="image/svg+xml" href="/static/lotus.svg">
+  <link rel="stylesheet" href="/static/style.css">
+  <script src="/static/app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <aside class="sidebar" aria-label="Main navigation">
+    <a class="brand" href="#personal" aria-label="Vedika home">
+      <img src="/static/lotus.svg" width="44" height="44" alt="">
+      <span><strong>vedika<span class="brand-dot">.</span></strong><small data-i18n="brandCaption">VEDIC WISDOM, CLEARLY</small></span>
+    </a>
+    <div class="sidebar-divider"></div>
+    <p class="nav-eyebrow" data-i18n="workspace">YOUR WORKSPACE</p>
+    <nav id="navigation"></nav>
+    <div class="sidebar-bottom">
+      <div class="sidebar-seal" aria-hidden="true">ॐ</div>
+      <p data-i18n="sideQuote">Rooted in tradition.<br>Made for understanding.</p>
+      <div class="privacy-pill"><span class="status-dot"></span><span data-i18n="localPrivate">Local & private</span></div>
+      <p class="sidebar-version">VEDIKA · 2.0.0</p>
+    </div>
+  </aside>
+  <div class="app-shell">
+    <header class="topbar">
+      <div class="breadcrumb"><span data-i18n="home">Workspace</span><span class="breadcrumb-slash">/</span><strong id="breadcrumb-current">Matchmaking</strong></div>
+      <div class="topbar-actions"><button type="button" id="logout-button" class="small-button" hidden>Sign out</button><button type="button" class="reset-button small-button" id="clear-button" data-i18n="clearAll">Refresh / clear details</button>
+        <div class="engine-status" id="engine-status" role="status"><span class="status-dot pending"></span><span data-i18n="connecting">Connecting</span></div>
+        <div class="language-control" role="group" aria-label="Language">
+          <button type="button" data-lang="en" class="active" aria-pressed="true">EN</button>
+          <button type="button" data-lang="hi" aria-pressed="false">हिं</button>
+          <button type="button" data-lang="mr" aria-pressed="false">मर</button>
+        </div>
+      </div>
+    </header>
+    <main id="main" tabindex="-1">
+      <section class="page-intro" id="page-intro">
+        <div class="intro-content"><div class="eyebrow"><span class="little-star">✧</span><span data-i18n="introEyebrow">THE ART OF COMING TOGETHER</span></div><h1 id="page-title">A thoughtful beginning.<br><em>A shared journey.</em></h1><p class="intro-description" id="page-description">Explore the traditional Vedic dimensions of compatibility, with every calculation open for you to understand.</p></div>
+        <div class="hero-motion has-video"><video id="planet-video" class="planet-video" autoplay loop muted playsinline preload="metadata" poster="/static/planets-poster.jpg" aria-hidden="true"><source src="/static/planets-orbit.webm" type="video/webm"></video><div class="orbit-stage" aria-hidden="true"><div class="orbit-ring ring-1"><i class="orbit-planet"></i></div><div class="orbit-ring ring-2"><i class="orbit-planet"></i></div><div class="orbit-ring ring-3"><i class="orbit-planet"></i></div><div class="orbit-core"><img src="/static/lotus.svg" width="74" height="74" alt=""></div></div><button type="button" id="motion-toggle" class="text-button motion-toggle" aria-pressed="false">Pause animation</button><div class="hero-caption"><span class="caption-line"></span><span data-i18n="siderealCaption">SIDEREAL · LAHIRI · VEDIC</span><span class="caption-line"></span></div></div>
+      </section>
+      <p class="session-notice" data-i18n="sessionNotice">Session only · details are cleared on refresh.</p>
+      <div id="notification" class="notification" role="status" aria-live="polite" hidden></div>
+      <div id="workspace-content">
+        <div class="section-topline"><div><span class="step-number">01</span><h2 data-i18n="birthDetails">Birth details</h2><span class="small-muted" data-i18n="birthDetailsHint">A precise beginning makes a meaningful chart.</span></div><button class="text-button" id="demo-button" type="button"><span aria-hidden="true">↗</span> <span data-i18n="tryDemo">Try fictional demo</span></button></div>
+        <form id="analysis-form" autocomplete="off">
+          <div class="profile-grid" id="profiles-grid"><div id="profile-a"></div><div id="profile-b"></div></div>
+          
+          <section id="review-controls" class="card review-controls" hidden></section>
+          <div class="action-bar"><p class="accuracy-note"><span class="note-icon" aria-hidden="true">i</span><span data-i18n="timeRequired">Birth time is required. An approximate time can change the ascendant and divisional charts.</span></p><button id="calculate-button" class="primary-button" type="submit"><span data-i18n="calculateMatch">Explore compatibility</span><span aria-hidden="true">→</span></button></div>
+        </form>
+        <div class="trust-strip"><span><span aria-hidden="true">✦</span><span data-i18n="trustEphemeris">Swiss Ephemeris calculations</span></span><span><span aria-hidden="true">◇</span><span data-i18n="trustRules">Transparent traditional rules</span></span><span><span aria-hidden="true">⌁</span><span data-i18n="trustPrivacy">Birth details are not stored</span></span></div>
+        <section id="results" class="results" aria-live="polite" aria-label="Analysis results"></section>
+        <div id="empty-insight" class="empty-insight"><div class="empty-symbol" aria-hidden="true">✧</div><div><h3 data-i18n="emptyTitle">Every connection has a story.</h3><p data-i18n="emptyBody">Enter both birth details to discover eight dimensions of traditional compatibility, individual charts, and the rules behind your results.</p></div><span class="empty-leaf" aria-hidden="true">❧</span></div>
+      </div>
+      <footer class="main-footer"><div><img src="/static/lotus.svg" width="22" height="22" alt=""><span data-i18n="footerWisdom">Ancient wisdom. Considered interpretation.</span></div><p data-i18n="footerNote">Traditional astrology is a cultural practice, not a scientifically validated way to predict events. A score does not decide a relationship.</p><a href="/source" target="_blank" rel="noopener">Source &amp; license</a></footer>
+    </main>
+  </div>
+</body>
+</html>
